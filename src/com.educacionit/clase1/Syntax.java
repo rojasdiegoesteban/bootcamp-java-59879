@@ -2,6 +2,8 @@ package com.educacionit.clase1;
 
 /**
  * {@code Syntax} contains examples about java syntax
+ *
+ * Documentation: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html
  */
 public class Syntax {
 
@@ -11,12 +13,21 @@ public class Syntax {
      * @param args command line arguments
      */
     public static void main(String[] args) {
-
         /*
             Variable
         */
-        var myVar = 0;
-        myVar = 1;
+        var myVar = 0; // declaración
+        myVar = 1; // asignación
+        myVar = 2;
+        myVar = 3 + 3;
+        // myVar = "hola";
+
+        System.out.println(myVar);
+
+        var myHola = "hola";
+
+        var somethingReallyImportant = "important"; // naming in lowerCamelCase
+        somethingReallyImportant = "importante!";
 
 
         /*
@@ -30,9 +41,9 @@ public class Syntax {
             Expressions vs Statements
         */
 
-        myVar = 3; // statement
+        myVar = 5; // statement
 
-        System.out.println("myVar=" + myVar);
+        //System.out.println("myVar=" + myVar);
 
 
         // start of statement
@@ -44,11 +55,16 @@ public class Syntax {
                 "myVar=" + myVar // this is also an expression
         );
 
+        System.out.println(
+                2 + 2 // this is also an expression
+        );
+
 
         /*
             Code blocks
         */
 
+        //var score = 700;
         {
             // This is inside the code block (block scope)
             var score = 800;

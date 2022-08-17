@@ -59,7 +59,7 @@ public class DataTypes {
         float minFloat = 1.4E-45f;
         System.out.println(minFloat);
 
-        var myFloat = 1.0f; // default is double, so we need to add as suffix 'f'
+        var myFloat = 1.5f; // default is double, so we need to add as suffix 'f'
         System.out.println(myFloat);
 
 
@@ -70,12 +70,15 @@ public class DataTypes {
         double minDouble = 4.9E-324;
         System.out.println(minDouble);
 
+        var myDouble = 1.5; // default is double
+        System.out.println(myDouble);
+
 
         // boolean (1-bit)
-        boolean myTrue = true;
+        boolean myTrue = true; // 1
         System.out.println(myTrue);
 
-        boolean myFalse = false;
+        boolean myFalse = false; // 0
         System.out.println(myFalse);
 
 

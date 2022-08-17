@@ -37,13 +37,13 @@ public class Operators {
         var negative = -num;
         System.out.println(negative);
 
-        num++;
+        num++; // num = num + 1;
         System.out.println(num);
 
-        num--;
+        num--; // num = num - 1;
         System.out.println(num);
 
-        boolean bool = true;
+        boolean bool = true; // nor
         System.out.println(!bool);
 
 
@@ -53,16 +53,16 @@ public class Operators {
         num = 4;
         System.out.println(num);
 
-        num += 2;
+        num += 2; // num = num + 2;
         System.out.println(num);
 
-        num -= 2;
+        num -= 2; // num = num - 2;
         System.out.println(num);
 
-        num *= 2;
+        num *= 2; // num = num * 2;
         System.out.println(num);
 
-        num /= 2;
+        num /= 2; // num = num / 2;
         System.out.println(num);
 
         num %= 2;
@@ -97,13 +97,13 @@ public class Operators {
         /*
           Logical operators (&&, ||)
         */
-        boolean b1 = true, b2 = false, b3 = true;
+        boolean b1 = true, b2 = false, b3 = true, b4 = false;
 
         System.out.println(b1 && b2); // false
         System.out.println(b1 && b3); // true
 
-        System.out.println(b1 || b2); // true
-        System.out.println(b1 || b3); // true
+        //System.out.println(b1 || b2); // true
+        //System.out.println(b1 || b3); // true
 
 
         /*
@@ -113,7 +113,7 @@ public class Operators {
 
         var str = a < b ? "a is less than b" : "b is less than a";
 
-        System.out.println(str);
+        //System.out.println(str);
 
     }
 }
