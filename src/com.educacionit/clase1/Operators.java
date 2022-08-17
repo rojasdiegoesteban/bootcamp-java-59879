@@ -16,32 +16,32 @@ public class Operators {
         double num = 5;
 
         var sum = num + 2;
-        System.out.println(sum);
+        //System.out.println(sum);
 
         var sub = num - 2;
-        System.out.println(sub);
+        //System.out.println(sub);
 
         var mul = num * 2;
-        System.out.println(mul);
+        //System.out.println(mul);
 
         var div = num / 2;
-        System.out.println(div);
+        //System.out.println(div);
 
         var mod = num % 2;
-        System.out.println(mod);
+        //System.out.println(mod);
 
 
         /*
           Unary operators (-, ++, --, !)
         */
         var negative = -num;
-        System.out.println(negative);
+        //System.out.println(negative);
 
         num++; // num = num + 1;
-        System.out.println(num);
+        //System.out.println(num);
 
         num--; // num = num - 1;
-        System.out.println(num);
+        //System.out.println(num);
 
         boolean bool = true; // nor
         System.out.println(!bool);
@@ -51,22 +51,22 @@ public class Operators {
           Assignment operators (=, +=, -=, *=, /=)
         */
         num = 4;
-        System.out.println(num);
+        //System.out.println(num);
 
         num += 2; // num = num + 2;
-        System.out.println(num);
+        //System.out.println(num);
 
         num -= 2; // num = num - 2;
-        System.out.println(num);
+        //System.out.println(num);
 
         num *= 2; // num = num * 2;
-        System.out.println(num);
+        //System.out.println(num);
 
         num /= 2; // num = num / 2;
-        System.out.println(num);
+        //System.out.println(num);
 
         num %= 2;
-        System.out.println(num);
+        //System.out.println(num);
 
 
         /*
@@ -97,23 +97,31 @@ public class Operators {
         /*
           Logical operators (&&, ||)
         */
-        boolean b1 = true, b2 = false, b3 = true, b4 = false;
+        boolean b1 = false, b2 = false, b3 = true, b4 = true;
 
-        System.out.println(b1 && b2); // false
-        System.out.println(b1 && b3); // true
+        // AND
+        System.out.println(b1 && b2); // false  AND false   : false
+        System.out.println(b1 && b3); // false  AND true    : false
+        System.out.println(b3 && b1); // true   AND false   : false
+        System.out.println(b3 && b4); // true   AND true    : true
 
-        //System.out.println(b1 || b2); // true
-        //System.out.println(b1 || b3); // true
+        // OR
+        System.out.println(b1 || b2); // false  OR false   : false
+        System.out.println(b1 || b3); // false  OR true    : true
+        System.out.println(b3 || b1); // true   OR false   : true
+        System.out.println(b3 || b4); // true   OR true    : true
 
 
         /*
           Ternary operator (?:)
         */
-        int a = 12, b = 11;
+        int a = 10, b = 11;
 
-        var str = a < b ? "a is less than b" : "b is less than a";
+        boolean isALessThanB = a < b;
 
-        //System.out.println(str);
+        var str = isALessThanB ? "A is less than B" : "B is less than A";
+
+        System.out.println(str);
 
     }
 }
