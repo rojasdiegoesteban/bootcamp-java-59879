@@ -12,7 +12,7 @@ public class SwitchCase {
 
         // basic switch
 
-        var monthNumber = 8;
+        var monthNumber = 100;
         String monthString;
 
         switch (monthNumber) {
@@ -54,7 +54,6 @@ public class SwitchCase {
                 break;
             default:
                 monthString = "Invalid month";
-                break;
         }
         System.out.println("Month = " + monthString);
 
@@ -62,7 +61,7 @@ public class SwitchCase {
         // switch using Strings
 
         monthNumber = 0;
-        String month = "January";
+        String month = "APRIL";
 
         switch (month.toLowerCase()) {
             case "january":
@@ -105,9 +104,27 @@ public class SwitchCase {
         System.out.println("Month Num = " + monthNumber);
 
 
+        // Ejercicio: evaluar el color del semaforo e imprimir un mensaje
+
+        String color = "rojo";
+
+        String message = "default";
+        switch (color) {
+            case "rojo":
+                message = "frena!";
+                break;
+            case "verde":
+                message = "pasa nomas";
+                break;
+            case "amarillo":
+                message = "apurate o frena!";
+        }
+        System.out.println(message);
+
+
         // creative switch
 
-        var switchNumVal = 7;
+        int switchNumVal = 7;
 
         switch (switchNumVal) {
             case 1:
@@ -124,7 +141,6 @@ public class SwitchCase {
                 break;
             default:
                 System.out.println("it wasn't one, two, three, four or five...");
-                break;
         }
     }
 }

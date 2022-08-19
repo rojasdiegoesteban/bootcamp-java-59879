@@ -32,6 +32,11 @@ public class DataTypes {
         short minShort = -32_768;
         System.out.println(minShort);
 
+        short num1 = 5;
+        short num2 = 5;
+
+        short resultado = (short) (num1 + num2);
+
 
         // int (32-bit)
         int maxInt = 2_147_483_647;

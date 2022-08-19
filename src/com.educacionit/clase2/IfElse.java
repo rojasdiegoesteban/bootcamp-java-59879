@@ -16,7 +16,9 @@ public class IfElse {
         */
         int currentSpeed = 1;
 
-        boolean isMoving = currentSpeed > 0, applyBrakes = true;
+        boolean isMoving = currentSpeed > 0;
+
+        boolean applyBrakes = true;
 
         // the "if" clause: bicycle must be moving AND apply brakes
         if (isMoving && applyBrakes) {
@@ -44,7 +46,7 @@ public class IfElse {
         /*
             nested if (if-else-if)
         */
-        int testscore = 82;
+        int testscore = 30;
         int grade;
 
         if (testscore == 100) {
@@ -62,9 +64,31 @@ public class IfElse {
         } else if (testscore >= 60) {
             grade = 4;
         } else {
-            grade = 2;
+            grade = 2; // default
         }
         System.out.println("Grade = " + grade);
 
+
+        // Ejercicio: evaluar si un numero X es par o impar e imprimirlo
+
+        int num = 5;
+        if (num % 2 == 0) {
+            System.out.println(num + " es par");
+        } else {
+            System.out.println(num + " es impar");
+        }
+
+
+        // Ejercicio: evaluar el color del semaforo e imprimir un mensaje
+
+        String color = "rojo"; // (rojo|verde|amarillo)
+
+        if (color.equals("rojo")) {
+            System.out.println("frena!");
+        } else if (color.equals("verde")) {
+            System.out.println("pasa nomas");
+        } else {
+            System.out.println("apurate o frena!");
+        }
     }
 }

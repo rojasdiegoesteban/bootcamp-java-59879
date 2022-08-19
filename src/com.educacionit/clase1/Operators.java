@@ -44,7 +44,8 @@ public class Operators {
         //System.out.println(num);
 
         boolean bool = true; // nor
-        System.out.println(!bool);
+        boolean bool1 = false; // nor
+        System.out.println( "nor=" +  !(bool || bool1)  );
 
 
         /*
@@ -74,7 +75,6 @@ public class Operators {
         */
         int num1 = 2, num2 = 3, num3 = 2;
         boolean res;
-
         res = num1 < num2;
         System.out.println(res);
 
@@ -93,7 +93,6 @@ public class Operators {
         res = num1 != num3;
         System.out.println(res);
 
-
         /*
           Logical operators (&&, ||)
         */
@@ -111,15 +110,15 @@ public class Operators {
         System.out.println(b3 || b1); // true   OR false   : true
         System.out.println(b3 || b4); // true   OR true    : true
 
-
         /*
           Ternary operator (?:)
         */
-        int a = 10, b = 11;
+        int a = 12, b = 11;
 
         boolean isALessThanB = a < b;
 
-        var str = isALessThanB ? "A is less than B" : "B is less than A";
+        // variable = (true|false) ? valTrue : valDefault;
+        String str = isALessThanB ? "A is less than B" : "B is less than A";
 
         System.out.println(str);
 
