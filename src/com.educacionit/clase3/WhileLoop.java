@@ -17,7 +17,7 @@ public class WhileLoop {
         */
         int count = 1;
         while (count < 11) {
-            //System.out.println("Count is: " + count);
+            System.out.println("Count is: " + count);
             count++;
         }
 
@@ -26,7 +26,7 @@ public class WhileLoop {
         */
         count = 1;
         while (true) {
-            //System.out.println("Count is: " + count);
+            System.out.println("Count is: " + count);
             count++;
 
             // exit condition
@@ -41,11 +41,24 @@ public class WhileLoop {
         count = 1;
         while (true) {
             if (count < 11) {
-                //System.out.println("Count is: " + count);
+                System.out.println("Count is: " + count);
                 count++;
+                // continua con el siguiente ciclo
                 continue;
             }
             break;
         }
+
+        // print the reverse number
+        int numero = 123456;
+        int invertido = 0;
+
+        while (numero > 0) {
+            int resto = numero % 10;
+            invertido = invertido * 10 + resto;
+            numero /= 10;
+        }
+
+        System.out.println("numero inverso " + invertido); // 654321
     }
 }

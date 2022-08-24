@@ -13,21 +13,31 @@ public class EnhancedFor {
         /*
             Array
         */
-        int[] myArrayInt = new int[5];
-        myArrayInt[0] = 1;
-        myArrayInt[1] = 2;
-        myArrayInt[2] = 3;
-        myArrayInt[3] = 4;
-        myArrayInt[4] = 5;
+        int[] myArrayInt = new int[5]; // necesito 5 posiciones
 
+        //Las 5 posiciones tienen un index que va de 0-4
+        myArrayInt[0] = 1;
         System.out.println("array value=" + myArrayInt[0]);
+
+        myArrayInt[1] = 2;
         System.out.println("array value=" + myArrayInt[1]);
+
+        myArrayInt[2] = 3;
         System.out.println("array value=" + myArrayInt[2]);
+
+        myArrayInt[3] = 4;
         System.out.println("array value=" + myArrayInt[3]);
+
+        myArrayInt[4] = 5;
         System.out.println("array value=" + myArrayInt[4]);
 
-        for (int i = 0; i < myArrayInt.length; i++) {
-            //System.out.println("array value=" + myArrayInt[i]);
+        long[] myArrayLong = new long[5];
+        for (int index = 0; index < myArrayLong.length; index++) {
+            int value = index + 1; // puede ser cualquier valor entero
+            myArrayLong[index] = value; // como se asigna un valor al array
+            System.out.println("array value=" +
+                    myArrayLong[index] // como se recupera un valor del array
+            );
         }
 
         /*
@@ -35,12 +45,20 @@ public class EnhancedFor {
                 statement(s)
             }
         */
+
+        /*
+        for (int index = 0; index < myArrayInt.length; index++) {
+            int value = myArrayInt[index];
+            System.out.println("array value=" + value);
+        }
+        */
         for (int value : myArrayInt) {
-            //System.out.println("array value=" + value);
+            System.out.println("array value=" + value);
         }
 
-        for (char letter : "Hello world!".toCharArray()) {
-            //System.out.println(letter);
+        String str = "Hello world!";
+        for (char letter : str.toCharArray()) {
+            System.out.println(letter);
         }
 
     }

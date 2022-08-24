@@ -17,7 +17,7 @@ public class DoWhile {
         */
         int count = 1;
         do {
-            //System.out.println("Count is: " + count);
+            System.out.println("Count is: " + count);
             count++;
         } while (count < 11);
 
@@ -26,7 +26,7 @@ public class DoWhile {
         */
         count = 1;
         do {
-            //System.out.println("Count is: " + count);
+            System.out.println("Count is: " + count);
             count++;
 
             // exit condition
@@ -41,7 +41,7 @@ public class DoWhile {
         count = 1;
         do {
             if (count < 11) {
-                //System.out.println("Count is: " + count);
+                System.out.println("Count is: " + count);
                 count++;
                 continue;
             }
@@ -54,11 +54,11 @@ public class DoWhile {
         boolean condition = false;
 
         while (condition) {
-            //System.out.println("printed inside while");
+            System.out.println("printed inside while");
         }
 
         do {
-            //System.out.println("printed inside do-while");
+            System.out.println("printed inside do-while");
         } while (condition);
     }
 
