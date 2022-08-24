@@ -1,7 +1,7 @@
 package com.educacionit.clase3;
 
 /**
- * {@code WhileLoop} contains examples about do-while statement
+ * {@code DoWhile} contains examples about do-while statement
  * <p>
  * Documentation: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html
  *

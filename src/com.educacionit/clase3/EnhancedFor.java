@@ -1,7 +1,7 @@
 package com.educacionit.clase3;
 
 /**
- * {@code WhileLoop} contains examples about enhanced for aka "for-each"
+ * {@code EnhancedFor} contains examples about enhanced for, aka "for-each"
  * <p>
  * Documentation: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html
  *

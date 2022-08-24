@@ -1,7 +1,7 @@
 package com.educacionit.clase3;
 
 /**
- * {@code WhileLoop} contains examples about for statement
+ * {@code ForLoop} contains examples about for statement
  * <p>
  * Documentation: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html
  *
