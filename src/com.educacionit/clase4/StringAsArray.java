@@ -22,39 +22,57 @@ public class StringAsArray {
 
         // toCharArray
         for (char ch : str.toCharArray()) {
-            //System.out.println(ch);
+            System.out.println(ch);
         }
 
         // charAt
         char a = str.charAt(0);
-        //System.out.println(a);
+        System.out.println(a);
 
         char b = str.charAt(1);
-        //System.out.println(b);
+        System.out.println(b);
 
         char c = str.charAt(2);
-        //System.out.println(c);
+        System.out.println(c);
 
         // indexOf
         int indexOfA = str.indexOf('a');
-        //System.out.println(indexOfA);
+        System.out.println(indexOfA);
 
         int indexOfB = str.indexOf('b');
-        //System.out.println(indexOfB);
+        System.out.println(indexOfB);
 
         int indexOfC = str.indexOf('c');
-        //System.out.println(indexOfC);
+        System.out.println(indexOfC);
+
+        int indexOfX = str.indexOf('x');
+        System.out.println(indexOfX); // -1 no existe
 
         // split
         String javaIsCool = "Java is cool";
-        String[] split = javaIsCool.split(" ");
+
+        String separator = " ";
+        String[] split = javaIsCool.split(separator);
+
         for (String word : split) {
-            //System.out.println(word);
+            System.out.println(word);
         }
 
+        separator = " is ";
+        split = javaIsCool.split(separator);
+
+        for (String word : split) {
+            System.out.println(word);
+        }
+
+
+        // csv = comma separated values
         String csv = "apple,fall,Newton,inspire,gravity theory";
-        for (String word : csv.split(",")) {
-            //System.out.println(word);
+
+        String[] values = csv.split(",");
+
+        for (String word : values) {
+            System.out.println(word);
         }
 
     }

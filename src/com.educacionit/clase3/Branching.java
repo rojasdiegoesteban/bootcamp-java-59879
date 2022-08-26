@@ -14,27 +14,28 @@ public class Branching {
             Break statement
          */
 
-        int[] arrayOfInts = new int[5];
-        arrayOfInts[0] = 10;
-        arrayOfInts[1] = 11;
-        arrayOfInts[2] = 12;
-        arrayOfInts[3] = 13;
-        arrayOfInts[4] = 14;
+        // encontrar el número 12 y mostrar el index
+
+        int[] arrayOfInts = {
+                32, 87, 3, 589,
+                12, 1076, 2000,
+                8, 622, 127
+        };
 
         int searchfor = 12;
 
         boolean foundIt = false;
 
-        int i;
-        for (i = 0; i < arrayOfInts.length; i++) {
-            if (arrayOfInts[i] == searchfor) {
+        int index;
+        for (index = 0; index < arrayOfInts.length; index++) {
+            if (arrayOfInts[index] == searchfor) {
                 foundIt = true;
                 break;
             }
         }
 
         if (foundIt) {
-            System.out.println("Found " + searchfor + " at index " + i);
+            System.out.println("Found " + searchfor + " at index " + index);
         } else {
             System.out.println(searchfor + " not in the array");
         }
@@ -52,10 +53,10 @@ public class Branching {
         matrixOfInts[1][1] = 21;
         matrixOfInts[1][2] = 22;
 
-        searchfor = 21;
+        searchfor = 20;
         foundIt = false;
 
-        int j = 0;
+        int j = 0, i;
 
         search:
         for (i = 0; i < matrixOfInts.length; i++) {
@@ -68,9 +69,9 @@ public class Branching {
         }
 
         if (foundIt) {
-            //System.out.println("Found " + searchfor + " at [" + i + "][" + j + "]");
+            System.out.println("Found " + searchfor + " at [" + i + "][" + j + "]");
         } else {
-            //System.out.println(searchfor + " not in the array");
+            System.out.println(searchfor + " not in the array");
         }
 
 
@@ -90,7 +91,7 @@ public class Branching {
             // increment p count
             pCount++;
         }
-        //System.out.println("Found " + pCount + " p's in the string.");
+        System.out.println("Found " + pCount + " p's in the string.");
 
     }
 }
