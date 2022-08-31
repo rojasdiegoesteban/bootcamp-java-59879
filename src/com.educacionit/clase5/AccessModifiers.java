@@ -21,20 +21,19 @@ public class AccessModifiers {
     /*
         protected modifier specifies that the member can be accessed within its own package, classes and subclasses
      */
-    String packageAttribute;
+    protected String superclassAttribute;
 
-    void packageMethod() {
+    protected void superclassMethod() {
     }
 
      /*
         no modifier or 'package-private' specifies that the member can be accessed within its own package and classes
      */
 
-    protected String superclassAttribute;
+    String packageAttribute;
 
-    protected void superclassMethod() {
+    void packageMethod() {
     }
-
 
     /*
         private specifies that the member can be accessed only within its own classes

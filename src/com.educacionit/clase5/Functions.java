@@ -18,27 +18,27 @@ public class Functions {
         int num1 = 8, num2 = 2;
 
         operation = "add";
-        //System.out.println(operation + " = " + applyOperation(num1, num2, operation));
+        System.out.println(operation + " = " + applyOperation(num1, num2, operation));
 
         operation = "sub";
-        //System.out.println(operation + " = " + applyOperation(num1, num2, operation));
+        System.out.println(operation + " = " + applyOperation(num1, num2, operation));
 
         operation = "mul";
-        //System.out.println(operation + " = " + applyOperation(num1, num2, operation));
+        System.out.println(operation + " = " + applyOperation(num1, num2, operation));
 
         operation = "div";
-        //System.out.println(operastion + " = " + applyOperation(num1, num2, operation));
+        System.out.println(operation + " = " + applyOperation(num1, num2, operation));
 
         /*
             Function with no arguments and return
          */
-        //double avogadroConstant = avogadro();
-        //System.out.println("avogadro const is " + avogadroConstant);
+        double avogadroConstant = avogadro();
+        System.out.println("avogadro const is " + avogadroConstant);
 
         /*
             Function with arguments and no return (void)
          */
-        //printSquare(5);
+        printSquare(5);
 
     }
 
@@ -50,6 +50,7 @@ public class Functions {
      * @param operation valid arguments: 'add', 'sub', 'mul', 'div'
      * @return response in double or error
      */
+    // <modificador-acceso> <tipo-retorno> <nombre-func>(<arg0>, <arg1>, ... <argN>)
     public static double applyOperation(double a, double b, String operation) {
         double response = 0;
         switch (operation.toUpperCase()) {
@@ -74,7 +75,7 @@ public class Functions {
     /**
      * Function that return Avogadro’s number (number of particles in 1 mole)
      *
-     * @return the avogadro constant
+     * @return the avogadro constant (double)
      */
     public static double avogadro() {
         double exp = Math.pow(10, 23);
