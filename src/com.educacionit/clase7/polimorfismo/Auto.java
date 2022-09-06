@@ -1,11 +1,9 @@
-package com.educacionit.clase5.classes;
+package com.educacionit.clase7.polimorfismo;
 
 import java.util.Objects;
 
 public class Auto {
-    /*
-        Attributes (characteristics)
-     */
+
     private String color;
     private String marca;
     private String modelo;
@@ -16,32 +14,25 @@ public class Auto {
     private int velocidad;
     private int cambio = 1;
 
-    /*
-        Constructors
-     */
-
     public Auto() {
-        /*
-            seteamos valores por defecto
-         */
-        color = "blanco";
-        marca = "-";
-        modelo = "-";
-        cantidadPuertas = 3;
-        isDescapotable = false;
-        isDiesel = false;
-
-        //this("blanco", "-", "-", 3, false, false);
+        this("blanco", "-", "-", 3, false, false);
     }
 
     /**
-     *
-     * @param color color del auto (default = blanco)
-     * @param marca marca del auto
-     * @param modelo model del auto
+     * @param marca  marca del auto (ex: Fiat)
+     * @param modelo modelo del auto (ex: Chronos)
+     */
+    public Auto(String marca, String modelo) {
+        this("blanco", marca, modelo, 3, false, false);
+    }
+
+    /**
+     * @param color           color del auto (default = blanco)
+     * @param marca           marca del auto
+     * @param modelo          model del auto
      * @param cantidadPuertas cantidad de puertas (default = 3)
-     * @param isDescapotable es descapotable o no
-     * @param isDiesel es diesel o es naftero
+     * @param isDescapotable  es descapotable o no
+     * @param isDiesel        es diesel o es naftero
      */
     public Auto(String color, String marca, String modelo,
                 int cantidadPuertas, boolean isDescapotable, boolean isDiesel) {
@@ -52,24 +43,6 @@ public class Auto {
         this.isDescapotable = isDescapotable;
         this.isDiesel = isDiesel;
     }
-
-    /**
-     *
-     * @param marca marca del auto (ex: Fiat)
-     * @param modelo modelo del auto (ex: Chronos)
-     */
-    public Auto(String marca, String modelo) {
-        color = "blanco";
-        this.marca = marca;
-        this.modelo = modelo;
-        cantidadPuertas = 3;
-        isDescapotable = false;
-        isDiesel = false;
-    }
-
-    /*
-        Getters and Setters
-     */
 
     public String getColor() {
         return color;
@@ -127,19 +100,15 @@ public class Auto {
         return cambio;
     }
 
-    /*
-        behaviour
-     */
-
     /**
-     * Este método incrementa la velocidad en 1
+     * incrementa la velocidad en 1
      */
     public void acelerar() {
         this.velocidad++;
     }
 
     /**
-     * Este método decrementa la velocidad en 1
+     * decrementa la velocidad en 1
      */
     public void frenar() {
         this.velocidad--;
@@ -158,48 +127,38 @@ public class Auto {
      * decrementa cambio hasta 1
      */
     public void decrementarCambio() {
-        if(this.cambio > 1) {
+        if (this.cambio > 1) {
             this.cambio--;
         }
     }
 
-    /*
-        métodos comunes en todos los objetos
-        (que podemos sobrescribir)
-     */
-
-    @Override // sobrescrito
+    @Override
     public boolean equals(Object obj) {
         boolean isEqual = false;
-
-        // ¿Es obj instancia de Auto?
         if (obj instanceof Auto) {
-            // casteo
+
             Auto auto = (Auto) obj;
 
-            // evaluar mis criterios de comparación
             isEqual = this.marca.equals(auto.getMarca())
                     && this.modelo.equals(auto.getModelo())
                     && this.color.equals(auto.getColor());
         }
-
         return isEqual;
     }
 
-    @Override // sobrescrito
+    @Override
     public String toString() {
         return "Auto(" +
-                    "color=" + this.color +
-                    ", marca=" + this.marca +
-                    ", modelo=" + this.modelo +
-                    ", isDescapotable=" + this.isDescapotable +
-                    ", isDiesel=" + this.isDiesel +
+                "color=" + this.color +
+                ", marca=" + this.marca +
+                ", modelo=" + this.modelo +
+                ", isDescapotable=" + this.isDescapotable +
+                ", isDiesel=" + this.isDiesel +
                 ")";
     }
 
-    @Override // sobrescrito
+    @Override
     public int hashCode() {
-        // criterios para generar un hashcode
         return Objects.hash(this.marca, this.modelo, this.color);
     }
 

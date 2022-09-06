@@ -1,4 +1,4 @@
-package com.educacionit.clase5;
+package com.educacionit.clase5y6;
 
 /**
  * {@code AccessModifiers} contains examples about access level modifiers
