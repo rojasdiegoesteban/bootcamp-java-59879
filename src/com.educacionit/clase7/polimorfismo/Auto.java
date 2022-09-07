@@ -1,10 +1,14 @@
 package com.educacionit.clase7.polimorfismo;
 
+import com.educacionit.clase7.enums.ColoresDeVehiculo;
+import com.educacionit.clase7.interfaces.Terreno;
+import com.educacionit.clase7.interfaces.Vehiculo;
+
 import java.util.Objects;
 
-public class Auto {
+public class Auto implements Vehiculo, Terreno {
 
-    private String color;
+    private ColoresDeVehiculo color;
     private String marca;
     private String modelo;
     private int cantidadPuertas;
@@ -14,8 +18,12 @@ public class Auto {
     private int velocidad;
     private int cambio = 1;
 
+    // Constantes siempre static final y en UPPER_SNAKE_CASE
+    private static final int CANTIDAD_RUEDAS = 4;
+    private static final double RODADO = 17.;
+
     public Auto() {
-        this("blanco", "-", "-", 3, false, false);
+        this(ColoresDeVehiculo.BLANCO, "-", "-", 3, false, false);
     }
 
     /**
@@ -23,18 +31,18 @@ public class Auto {
      * @param modelo modelo del auto (ex: Chronos)
      */
     public Auto(String marca, String modelo) {
-        this("blanco", marca, modelo, 3, false, false);
+        this(ColoresDeVehiculo.BLANCO, marca, modelo, 3, false, false);
     }
 
     /**
-     * @param color           color del auto (default = blanco)
+     * @param color           color del auto del tipo {@link ColoresDeVehiculo}
      * @param marca           marca del auto
      * @param modelo          model del auto
      * @param cantidadPuertas cantidad de puertas (default = 3)
      * @param isDescapotable  es descapotable o no
      * @param isDiesel        es diesel o es naftero
      */
-    public Auto(String color, String marca, String modelo,
+    public Auto(ColoresDeVehiculo color, String marca, String modelo,
                 int cantidadPuertas, boolean isDescapotable, boolean isDiesel) {
         this.color = color;
         this.marca = marca;
@@ -44,12 +52,16 @@ public class Auto {
         this.isDiesel = isDiesel;
     }
 
-    public String getColor() {
+    public ColoresDeVehiculo getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(ColoresDeVehiculo color) {
         this.color = color;
+    }
+
+    public void setColor(String color) {
+        this.color = ColoresDeVehiculo.valueOf(color.toUpperCase());
     }
 
     public String getMarca() {
@@ -130,6 +142,22 @@ public class Auto {
         if (this.cambio > 1) {
             this.cambio--;
         }
+    }
+
+    /**
+     * Método que me recupera la cantidad de ruedas
+     * @return cantidad de Ruedas
+     */
+    public int getCantidadRuedas() {
+        return CANTIDAD_RUEDAS;
+    }
+
+    /**
+     * Método que me recupera el rodado del Auto
+     * @return rodado
+     */
+    public double getRodado() {
+        return RODADO;
     }
 
     @Override
