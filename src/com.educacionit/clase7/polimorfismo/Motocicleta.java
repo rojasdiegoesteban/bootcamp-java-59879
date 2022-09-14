@@ -55,20 +55,23 @@ public class Motocicleta implements Terreno {
         this.color = color;
     }
 
+    @Override
     public void frenar() {
         this.velocidad--;
     }
 
-    public void acelerar() {
-        this.velocidad++;
-    }
-
+    @Override
     public int getCantidadRuedas() {
         return CANTIDAD_RUEDAS;
     }
 
+    @Override
     public double getRodado() {
         return RODADO;
+    }
+
+    public void acelerar() {
+        this.velocidad++;
     }
 
     @Override
