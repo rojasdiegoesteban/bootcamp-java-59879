@@ -1,25 +1,26 @@
-package com.educacionit.clase11.classes;
+package com.educacionit.clase11y12.classes;
 
 import java.util.Objects;
 
 public final class Alumno {
-    private String id;
+
+    private Long id;
     private String nombre;
 
-    public Alumno(String id, String nombre) {
+    public Alumno(Long id, String nombre) {
         this.id = id;
         this.nombre = nombre;
     }
 
     public Alumno() {
-        this("", "");
+        this(null, "");
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

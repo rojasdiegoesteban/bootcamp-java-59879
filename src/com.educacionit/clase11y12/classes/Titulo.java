@@ -1,9 +1,10 @@
-package com.educacionit.clase11.classes;
+package com.educacionit.clase11y12.classes;
 
 import java.util.Date;
 import java.util.Objects;
 
 public final class Titulo {
+
     private String nombre;
     private Date fechaDeEgreso;
     private Alumno alumno;

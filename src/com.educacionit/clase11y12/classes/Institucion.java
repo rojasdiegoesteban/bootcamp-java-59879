@@ -1,4 +1,4 @@
-package com.educacionit.clase11.classes;
+package com.educacionit.clase11y12.classes;
 
 import java.util.Objects;
 
